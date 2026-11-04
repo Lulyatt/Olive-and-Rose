@@ -30,37 +30,38 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-olive: var(--olive);
-  --color-olive-foreground: var(--olive-foreground);
-  --color-rose: var(--rose);
-  --color-sand: var(--sand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-foreground: var(--brand-dark-foreground);
+  --color-blush: var(--blush);
+  --color-gold: var(--gold);
 }
 
 :root {
   --radius: 2px;
-  --background: oklch(0.975 0.012 85);       /* warm ivory */
-  --foreground: oklch(0.27 0.02 95);         /* deep olive-ink */
-  --card: oklch(0.955 0.018 80);
+  /* Rose & gold palette — adjust values here to refine the brand */
+  --background: oklch(0.978 0.009 85);       /* warm ivory */
+  --foreground: oklch(0.29 0.024 48);        /* deep warm brown / charcoal */
+  --card: oklch(0.965 0.014 82);
   --card-foreground: var(--foreground);
   --popover: var(--background);
   --popover-foreground: var(--foreground);
-  --primary: oklch(0.45 0.05 115);           /* muted olive */
-  --primary-foreground: oklch(0.975 0.012 85);
-  --secondary: oklch(0.93 0.022 75);         /* soft beige */
+  --primary: oklch(0.56 0.058 17);           /* dusty rose */
+  --primary-foreground: oklch(0.98 0.008 85);
+  --secondary: oklch(0.945 0.018 12);        /* blush pink tint */
   --secondary-foreground: var(--foreground);
-  --muted: oklch(0.93 0.022 75);
-  --muted-foreground: oklch(0.5 0.02 80);
-  --accent: oklch(0.8 0.05 25);              /* dusty rose */
+  --muted: oklch(0.942 0.016 12);
+  --muted-foreground: oklch(0.47 0.022 48);
+  --accent: oklch(0.74 0.048 88);            /* champagne gold */
   --accent-foreground: var(--foreground);
   --destructive: oklch(0.55 0.15 28);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.86 0.02 80);
-  --input: oklch(0.82 0.02 80);
-  --ring: oklch(0.45 0.05 115);
-  --olive: oklch(0.36 0.04 115);             /* deep olive for bands */
-  --olive-foreground: oklch(0.95 0.015 85);
-  --rose: oklch(0.86 0.04 30);
-  --sand: oklch(0.91 0.03 75);
+  --border: oklch(0.88 0.028 78);
+  --input: oklch(0.84 0.024 78);
+  --ring: oklch(0.74 0.048 88);
+  --brand-dark: oklch(0.30 0.022 48);        /* footer & editorial bands */
+  --brand-dark-foreground: oklch(0.955 0.012 85);
+  --blush: oklch(0.928 0.028 15);            /* blush pink surfaces */
+  --gold: oklch(0.74 0.048 88);
 }
 
 @layer base {
@@ -74,7 +75,7 @@
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; }
-  ::selection { background: var(--rose); }
+  ::selection { background: var(--blush); color: var(--foreground); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

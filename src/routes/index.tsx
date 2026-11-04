@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Olive & Rose — Boutique Hair Salon in Guildford, Surrey" },
-      { name: "description", content: "Considered cuts, lived-in colour and restorative treatments at Olive & Rose, an independent hair salon on Quarry Street, Guildford." },
+      { name: "description", content: "Considered cuts, lived-in colour and restorative treatments at Olive & Rose, an independent hair salon on Rosewood Lane, Guildford." },
       { property: "og:title", content: "Olive & Rose — Boutique Hair Salon in Guildford" },
       { property: "og:description", content: "Considered cuts, lived-in colour and a calm chair to sit in. Book your appointment online." },
     ],
@@ -45,14 +45,14 @@ function Home() {
             <div className="overflow-hidden">
               <img
                 src={hero}
-                alt="Client with glossy brunette waves smiling over her shoulder in an olive velvet salon chair"
+                alt="Client with glossy brunette waves smiling over her shoulder in a blush velvet salon chair"
                 width={1600}
                 height={1104}
                 fetchPriority="high"
                 className="aspect-[4/5] w-full animate-in fade-in zoom-in-105 object-cover object-[60%_center] duration-[1800ms] sm:aspect-[4/3] lg:aspect-[5/6] xl:aspect-[4/4.4]"
               />
             </div>
-            <p className="eyebrow absolute -bottom-6 right-0 hidden bg-background py-2 pl-4 text-muted-foreground md:block">Est. 2017 — Quarry Street</p>
+            <p className="eyebrow absolute -bottom-6 right-0 hidden bg-background py-2 pl-4 text-muted-foreground md:block">Est. 2017 — Rosewood Lane</p>
           </div>
         </div>
       </section>
@@ -72,7 +72,7 @@ function Home() {
       {/* Split image + text */}
       <section className="container-site grid items-center gap-10 pb-24 md:grid-cols-12 md:gap-12 md:pb-36">
         <Reveal className="img-zoom md:col-span-7">
-          <img src={interior} alt="The light-filled Olive & Rose salon with arched mirrors and olive chairs" width={1408} height={1008} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+          <img src={interior} alt="The light-filled Olive & Rose salon with arched mirrors and blush velvet chairs" width={1408} height={1008} loading="lazy" className="aspect-[4/3] w-full object-cover" />
         </Reveal>
         <Reveal delay={150} className="md:col-span-4 md:col-start-9">
           <p className="eyebrow text-primary">The space</p>
@@ -135,10 +135,10 @@ function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-olive py-24 text-olive-foreground md:py-32">
+      <section className="bg-brand-dark py-24 text-brand-dark-foreground md:py-32">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow text-rose">Kind words</p>
+            <p className="eyebrow text-gold">Kind words</p>
           </Reveal>
           <div className="mt-12 grid gap-14 md:grid-cols-3 md:gap-10">
             {testimonials.map((t, i) => (
@@ -146,7 +146,7 @@ function Home() {
                 <blockquote className={i === 0 ? "font-serif text-3xl leading-snug md:text-5xl md:leading-[1.15]" : "font-serif text-2xl leading-snug"}>
                   “{t.quote}”
                 </blockquote>
-                <figcaption className="eyebrow mt-6 text-olive-foreground/60">{t.name} — {t.detail}</figcaption>
+                <figcaption className="eyebrow mt-6 text-brand-dark-foreground/60">{t.name} — {t.detail}</figcaption>
               </Reveal>
             ))}
           </div>

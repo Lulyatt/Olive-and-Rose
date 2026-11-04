@@ -1,6 +1,6 @@
 // Content modules are shaped to mirror future Decap CMS collections
 // (services, stylists, gallery) so they can be swapped for Markdown/JSON files later.
-export const BOOKING_URL = "https://booking.example.com/olive-and-rose";
+export const BOOKING_URL = "https://www.fresha.com/en-GB/for-business";
 
 export const site = {
   name: "Olive & Rose",
@@ -8,9 +8,15 @@ export const site = {
   phone: "01483 555 214",
   phoneHref: "tel:+441483555214",
   email: "hello@oliveandrose.co.uk",
-  address: ["14 Quarry Street", "Guildford, Surrey", "GU1 3UY"],
+  address: [
+    "Olive & Rose Hair Studio",
+    "28 Rosewood Lane",
+    "Guildford",
+    "Surrey",
+    "GU1 2NX",
+  ],
   mapEmbed:
-    "https://www.google.com/maps?q=Quarry+Street+Guildford+GU1+3UY&output=embed",
+    "https://www.google.com/maps?q=28+Rosewood+Lane+Guildford+GU1+2NX&output=embed",
   hours: [
     { day: "Monday", time: "Closed" },
     { day: "Tuesday", time: "9:00 – 18:00" },

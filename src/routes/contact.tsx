@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact & Opening Hours — Olive & Rose, Guildford" },
-      { name: "description", content: "Find Olive & Rose at 14 Quarry Street, Guildford. Opening hours, phone, email and enquiry form." },
+      { name: "description", content: "Find Olive & Rose Hair Studio at 28 Rosewood Lane, Guildford GU1 2NX. Opening hours, phone, email and enquiry form." },
       { property: "og:title", content: "Contact Olive & Rose" },
       { property: "og:description", content: "Opening hours, directions and how to get in touch with our Guildford salon." },
     ],
@@ -96,7 +96,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="eyebrow bg-primary px-8 py-4 text-primary-foreground transition-colors hover:bg-olive disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="eyebrow border border-gold/35 bg-primary px-8 py-4 text-primary-foreground transition-colors hover:border-gold/50 hover:bg-brand-dark disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 {status === "sending" ? "Sending…" : "Send message"}
               </button>
@@ -133,7 +133,7 @@ function Contact() {
 
       <section aria-label="Map" className="h-[380px] w-full md:h-[480px]">
         <iframe
-          title="Map showing Olive & Rose on Quarry Street, Guildford"
+          title="Map showing Olive & Rose Hair Studio on Rosewood Lane, Guildford"
           src={site.mapEmbed}
           className="h-full w-full grayscale-[60%] sepia-[15%]"
           loading="lazy"

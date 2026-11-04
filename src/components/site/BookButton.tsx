@@ -4,9 +4,11 @@ import { cn } from "@/lib/utils";
 type Variant = "solid" | "outline" | "light";
 
 const styles: Record<Variant, string> = {
-  solid: "bg-primary text-primary-foreground hover:bg-olive",
+  solid:
+    "border border-gold/35 bg-primary text-primary-foreground hover:border-gold/50 hover:bg-brand-dark",
   outline: "border border-foreground/70 text-foreground hover:bg-foreground hover:text-background",
-  light: "border border-olive-foreground/70 text-olive-foreground hover:bg-olive-foreground hover:text-olive",
+  light:
+    "border border-gold/55 text-brand-dark-foreground hover:border-gold/75 hover:bg-brand-dark-foreground/10",
 };
 
 export function BookButton({

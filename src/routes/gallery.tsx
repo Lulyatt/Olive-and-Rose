@@ -73,12 +73,12 @@ function Gallery() {
         <div role="dialog" aria-modal="true" aria-label={current.caption} className="fixed inset-0 z-[70] flex animate-in fade-in flex-col bg-foreground/95 text-background duration-300">
           <div className="flex items-center justify-between px-5 py-4 md:px-10">
             <p className="eyebrow text-background/70">{(index ?? 0) + 1} / {gallery.length}</p>
-            <button ref={closeRef} onClick={close} className="eyebrow p-2 hover:text-rose focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose">Close ✕</button>
+            <button ref={closeRef} onClick={close} className="eyebrow p-2 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">Close ✕</button>
           </div>
           <div className="relative flex flex-1 items-center justify-center px-4 pb-4 md:px-24" onClick={(e) => e.target === e.currentTarget && close()}>
             <img key={current.src} src={current.src} alt={current.alt} className="max-h-[78vh] max-w-full animate-in fade-in zoom-in-95 object-contain duration-500" />
-            <button onClick={() => step(-1)} aria-label="Previous image" className="absolute left-2 top-1/2 -translate-y-1/2 p-3 font-serif text-4xl hover:text-rose md:left-6">‹</button>
-            <button onClick={() => step(1)} aria-label="Next image" className="absolute right-2 top-1/2 -translate-y-1/2 p-3 font-serif text-4xl hover:text-rose md:right-6">›</button>
+            <button onClick={() => step(-1)} aria-label="Previous image" className="absolute left-2 top-1/2 -translate-y-1/2 p-3 font-serif text-4xl hover:text-gold md:left-6">‹</button>
+            <button onClick={() => step(1)} aria-label="Next image" className="absolute right-2 top-1/2 -translate-y-1/2 p-3 font-serif text-4xl hover:text-gold md:right-6">›</button>
           </div>
           <p className="pb-8 text-center font-serif text-xl italic">{current.caption}</p>
         </div>

@@ -9,9 +9,9 @@ export type GalleryImage = { src: string; alt: string; caption: string; tall?: b
 
 export const gallery: GalleryImage[] = [
   { src: balayage, alt: "Long honey-blonde balayage in loose waves, seen from behind", caption: "Hand-painted honey balayage", tall: true },
-  { src: interior, alt: "The Olive & Rose salon floor with arched mirrors and olive green chairs", caption: "The salon, Quarry Street" },
+  { src: interior, alt: "The Olive & Rose salon floor with arched mirrors and blush velvet chairs", caption: "The salon, Rosewood Lane" },
   { src: bob, alt: "Side profile of a woman with a sleek copper bob", caption: "Copper gloss & blunt bob", tall: true },
   { src: cutting, alt: "Stylist cutting a client's blonde hair with scissors and comb", caption: "Precision cutting", tall: true },
   { src: updo, alt: "Low bridal chignon decorated with dried flowers", caption: "Bridal chignon with dried florals", tall: true },
-  { src: hero, alt: "Client with glossy brunette waves seated in an olive velvet chair", caption: "Glossy brunette waves" },
+  { src: hero, alt: "Client with glossy brunette waves seated in a blush velvet chair", caption: "Glossy brunette waves" },
 ];

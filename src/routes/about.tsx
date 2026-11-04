@@ -2,15 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import interior from "@/assets/interior.jpg";
 import { PageIntro, BookingBand } from "@/components/site/PageIntro";
 import { Reveal } from "@/components/site/Reveal";
-import { stylists } from "@/content/stylists";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us & Our Stylists — Olive & Rose, Guildford" },
-      { name: "description", content: "Meet the team behind Olive & Rose, an independent Guildford hair salon founded in 2017 by Clara Whitfield." },
+      { title: "About Us — Olive & Rose, Guildford" },
+      { name: "description", content: "Our story and values at Olive & Rose, an independent boutique hair salon in Guildford, Surrey." },
       { property: "og:title", content: "About Olive & Rose" },
-      { property: "og:description", content: "Our story, our values and the stylists behind Guildford's boutique hair salon." },
+      { property: "og:description", content: "Our story and values at Guildford's boutique hair salon." },
     ],
   }),
   component: About,
@@ -31,19 +30,28 @@ function About() {
 
       <section className="container-site">
         <Reveal>
-          <img src={interior} alt="Inside the Olive & Rose salon on Quarry Street" width={1408} height={1008} loading="lazy" className="aspect-[16/10] w-full object-cover md:aspect-[21/9]" />
+          <img src={interior} alt="Inside the Olive & Rose salon on Rosewood Lane" width={1408} height={1008} loading="lazy" className="aspect-[16/10] w-full object-cover md:aspect-[21/9]" />
         </Reveal>
       </section>
 
       <section className="container-site grid gap-10 py-24 md:grid-cols-12 md:py-32">
         <Reveal className="md:col-span-4">
           <p className="eyebrow text-primary">Our story</p>
-          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">From Mayfair to Quarry Street.</h2>
+          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">A little more care. A little more you.</h2>
         </Reveal>
         <Reveal delay={120} className="space-y-5 leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7 md:text-lg">
-          <p>After twelve years in London's busiest salons, Clara Whitfield came home to Surrey wanting something different — a place where the craft came first and nobody was watching the clock.</p>
-          <p>In 2017 she took on the ground floor of a Georgian townhouse on Quarry Street, filled it with plants, olive velvet and good light, and named it after her grandmother's garden. Today we're a team of three stylists with a loyal, wonderfully chatty clientele.</p>
-          <p>We're proudly independent: no franchise rulebook, just people who love doing hair, doing it well.</p>
+          <p>
+            At Olive &amp; Rose, we believe a great hair experience is about more than just the finished look. It&apos;s about
+            feeling comfortable, taking time for yourself and leaving with a little more confidence than when you arrived.
+          </p>
+          <p>
+            We&apos;ve created a welcoming space where thoughtful styling, genuine care and attention to detail come together.
+            From a fresh cut to a complete colour transformation, every appointment is tailored to the individual.
+          </p>
+          <p>
+            We believe in doing things properly, never rushing the process and building relationships that last. Independent
+            by nature, personal by design — that&apos;s the way we like it.
+          </p>
         </Reveal>
       </section>
 
@@ -55,32 +63,6 @@ function About() {
               <h3 className="mt-3 text-3xl">{v.title}</h3>
               <p className="mt-3 leading-relaxed text-muted-foreground">{v.text}</p>
             </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-site py-24 md:py-36">
-        <Reveal>
-          <p className="eyebrow text-primary">The team</p>
-          <h2 className="mt-4 text-5xl md:text-6xl">Meet your stylists</h2>
-        </Reveal>
-        <div className="mt-16 space-y-20 md:space-y-32">
-          {stylists.map((s, i) => (
-            <article key={s.name} className="grid items-center gap-8 md:grid-cols-12 md:gap-12">
-              <Reveal className={`img-zoom md:col-span-5 ${i % 2 ? "md:order-2 md:col-start-8" : ""}`}>
-                <img src={s.image} alt={`Portrait of ${s.name}, ${s.role}`} width={800} height={1008} loading="lazy" className="aspect-[4/5] w-full object-cover" />
-              </Reveal>
-              <Reveal delay={120} className={`md:col-span-5 ${i % 2 ? "md:order-1 md:col-start-2" : "md:col-start-7"}`}>
-                <p className="eyebrow text-primary">{s.role}</p>
-                <h3 className="mt-3 text-4xl md:text-5xl">{s.name}</h3>
-                <p className="mt-5 leading-relaxed text-muted-foreground">{s.bio}</p>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {s.specialisms.map((sp) => (
-                    <li key={sp} className="border border-foreground/20 px-3 py-1.5 text-xs tracking-wide">{sp}</li>
-                  ))}
-                </ul>
-              </Reveal>
-            </article>
           ))}
         </div>
       </section>
