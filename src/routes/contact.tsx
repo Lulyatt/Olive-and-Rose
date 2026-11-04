@@ -26,7 +26,7 @@ const schema = z.object({
 });
 type Errors = Partial<Record<keyof z.infer<typeof schema>, string>>;
 
-function Field({ id, label, error, optional, children }: { id: string; label: string; error?: string; optional?: boolean; children: React.ReactNode }) {
+function Field({ id, label, error, optional, children }: { id: string; label: string; error?: string | undefined; optional?: boolean; children: React.ReactNode }) {
   return (
     <div>
       <label htmlFor={id} className="eyebrow text-muted-foreground">
