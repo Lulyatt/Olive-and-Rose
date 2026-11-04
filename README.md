@@ -23,7 +23,7 @@ The site models a premium independent salon brand: editorial typography, a cohes
 | Validation | [Zod](https://zod.dev/) on the contact form |
 | Tests | [Vitest](https://vitest.dev/) with Testing Library (routing smoke test) |
 
-Production builds use Nitro (Cloudflare-oriented preset in the default Lovable/TanStack configuration).
+Production builds use [Nitro](https://nitro.build/). Local/`npm run build` defaults to a Cloudflare-oriented preset (Lovable). On Netlify, `netlify.toml` sets `NITRO_PRESET=netlify` so static assets land in `dist` and SSR runs via Netlify Functions.
 
 ## Features & functionality
 
@@ -50,6 +50,16 @@ npm run dev
 | `npm run preview` | Preview production output |
 | `npm test` | Run tests |
 | `npm run lint` | ESLint |
+
+## Deploying to Netlify
+
+Connect the GitHub repo and use the settings in **`netlify.toml`** (do not set the publish directory to `dist/client`):
+
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+- **Node:** 22 (via `NODE_VERSION` in `netlify.toml`)
+
+If the site was created with a wrong publish path in the Netlify UI, either remove those overrides so the TOML file applies, or set **Publish directory** to `dist` manually. Redeploy after pushing `netlify.toml`.
 
 ## License & attribution
 

@@ -1,0 +1,10 @@
+# TanStack Start (Nitro) — static assets in `dist`, SSR in `.netlify/functions-internal`
+# https://nitro.build/deploy/providers/netlify
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NITRO_PRESET = "netlify"
