@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { BookButton } from "./BookButton";
 
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: React.ReactNode; children?: React.ReactNode }) {
   return (
@@ -16,6 +17,19 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title
   );
 }
 
-export function BookingBand({ title = "Your chair is waiting.", text }: { title?: string; text?: string }) {
-  return null as unknown as JSX.Element ?? (title + (text ?? ""));
+export function BookingBand({
+  title = "Your chair is waiting.",
+  text = "Book online in under a minute, or call the salon and we'll find a time that suits you.",
+}: { title?: string; text?: string }) {
+  return (
+    <section className="bg-rose">
+      <Reveal className="container-site flex flex-col items-start gap-8 py-20 md:flex-row md:items-end md:justify-between md:py-28">
+        <div className="max-w-2xl">
+          <h2 className="text-5xl leading-[1.05] md:text-7xl">{title}</h2>
+          <p className="mt-5 max-w-md text-foreground/75">{text}</p>
+        </div>
+        <BookButton />
+      </Reveal>
+    </section>
+  );
 }
